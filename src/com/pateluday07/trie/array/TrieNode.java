@@ -1,6 +1,7 @@
 package com.pateluday07.trie.array;
 
 public class TrieNode {
+
     private final TrieNode[] children = new TrieNode[26];
     private boolean isEndOfWord;
 
