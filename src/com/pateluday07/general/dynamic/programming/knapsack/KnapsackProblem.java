@@ -12,7 +12,8 @@ public class KnapsackProblem {
             }
             System.out.println();
         }
-        return null;
+        System.out.println("===============\n");
+        return findItemsToIncludeAndMaxValue(dpTable, weights);
     }
 
     private int[][] prepareDPTable(int[] weights, int[] values, int capacity) {
@@ -34,6 +35,21 @@ public class KnapsackProblem {
             }
         }
         return dpTable;
+    }
+
+    private KnapsackResult findItemsToIncludeAndMaxValue(int[][] dpTable, int[] weights) {
+        int item = dpTable.length - 1;
+        int capacity = dpTable[0].length - 1;
+        KnapsackResult result = new KnapsackResult();
+        result.setMaxValue(dpTable[item][capacity]);
+        while (item != 0) {
+            if (dpTable[item][capacity] != dpTable[item - 1][capacity]) {
+                result.getSelectedItems().add(item);
+                capacity = capacity - weights[item - 1];
+            }
+            item--;
+        }
+        return result;
     }
 
 }
