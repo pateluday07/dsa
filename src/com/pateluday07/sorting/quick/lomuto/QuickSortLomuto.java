@@ -13,9 +13,8 @@ public class QuickSortLomuto {
             return;
         int i = low - 1;
         for (int j = low; j < high; j++) {
-            if (arr[j] < arr[high]) {
+            if (arr[j] < arr[high])
                 swap(arr, ++i, j);
-            }
         }
         swap(arr, ++i, high);
         //sort left side
