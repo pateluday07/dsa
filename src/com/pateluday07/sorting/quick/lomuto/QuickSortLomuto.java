@@ -3,9 +3,7 @@ package com.pateluday07.sorting.quick.lomuto;
 public class QuickSortLomuto {
 
     public void sort(int[] arr) {
-        int low = 0;
-        int high = arr.length - 1;
-        quickSortLomuto(arr, low, high);
+        quickSortLomuto(arr, 0, arr.length - 1);
     }
 
     private void quickSortLomuto(int[] arr, int low, int high) {
@@ -23,10 +21,10 @@ public class QuickSortLomuto {
         quickSortLomuto(arr, i + 1, high);
     }
 
-    private void swap(int[] arr, int a, int b) {
-        int temp = arr[a];
-        arr[a] = arr[b];
-        arr[b] = temp;
+    private void swap(int[] arr, int indexA, int indexB) {
+        int temp = arr[indexA];
+        arr[indexA] = arr[indexB];
+        arr[indexB] = temp;
     }
 
 }
