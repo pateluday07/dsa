@@ -1,5 +1,6 @@
 package com.pateluday07.sorting.quick;
 
+import com.pateluday07.sorting.quick.hoares.QuickSortHoares;
 import com.pateluday07.sorting.quick.lomuto.QuickSortLomuto;
 import com.pateluday07.sorting.quick.lomuto.QuickSortLomutoRandomPivot;
 
@@ -19,6 +20,13 @@ public class QuickSortTest {
         int[] arr1 = {8, 6, 5, 4, 3, 2, 1};
         quickSortLomutoRandomPivot.sort(arr1);
         Arrays.stream(arr1)
+                .forEachOrdered(n -> System.out.print(n + " "));
+        System.out.println();
+
+        QuickSortHoares quickSortHoares = new QuickSortHoares();
+        int[] arr3 = {9, 4, 7, 1, 6, 2, 8};
+        quickSortHoares.sort(arr3);
+        Arrays.stream(arr3)
                 .forEachOrdered(n -> System.out.print(n + " "));
     }
 }
