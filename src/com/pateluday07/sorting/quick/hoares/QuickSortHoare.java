@@ -1,6 +1,6 @@
 package com.pateluday07.sorting.quick.hoares;
 
-public class QuickSortHoares {
+public class QuickSortHoare {
 
     public void sort(int[] arr) {
         quickSortWithHoares(arr, 0, arr.length - 1);
