@@ -7,7 +7,12 @@ public class BinarySearchTest {
         int target = 13;
 
         BinarySearchRecursive binarySearchRecursive = new BinarySearchRecursive();
-        System.out.println("Found: " + binarySearchRecursive.search(sortedArray, target));
+        System.out.println("Found: " + binarySearchRecursive.search(sortedArray, target) + "\n\n");
+
+        int[] reverseSortedArray = {15, 13, 11, 9, 7, 5, 3, 1};
+        target = 11;
+        BinarySearchIterative binarySearchIterative = new BinarySearchIterative();
+        System.out.println("Found: " + binarySearchIterative.search(reverseSortedArray, target));
 
     }
 }
