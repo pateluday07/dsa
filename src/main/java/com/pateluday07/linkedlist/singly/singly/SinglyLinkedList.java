@@ -1,4 +1,4 @@
-package com.pateluday07.linkedlist.singly;
+package com.pateluday07.linkedlist.singly.singly;
 
 public class SinglyLinkedList {
 
