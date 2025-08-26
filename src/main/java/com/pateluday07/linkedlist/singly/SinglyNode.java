@@ -1,11 +1,11 @@
-package  com.pateluday07.linkedlist;
+package com.pateluday07.linkedlist.singly;
 
-public class Node {
+public class SinglyNode {
 
     private int val;
-    private Node next;
+    private SinglyNode next;
 
-    public Node(int val) {
+    public SinglyNode(int val) {
         this.val = val;
     }
 
@@ -17,11 +17,11 @@ public class Node {
         this.val = val;
     }
 
-    public Node getNext() {
+    public SinglyNode getNext() {
         return next;
     }
 
-    public void setNext(Node next) {
+    public void setNext(SinglyNode next) {
         this.next = next;
     }
 

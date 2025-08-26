@@ -1,15 +1,15 @@
-package com.pateluday07.linkedlist;
+package com.pateluday07.linkedlist.singly;
 
-public class LinkedList {
+public class SinglyLinkedList {
 
-    private Node head;
-    private Node tail;
+    private SinglyNode head;
+    private SinglyNode tail;
     private int size = 0;
 
-    public LinkedList(Node head) {
+    public SinglyLinkedList(SinglyNode head) {
         nodeNullCheck(head);
         this.head = head;
-        Node temp = head;
+        SinglyNode temp = head;
         increaseSizeByOne();
         while (temp.getNext() != null) {
             temp = temp.getNext();
@@ -18,11 +18,11 @@ public class LinkedList {
         this.tail = temp;
     }
 
-    public Node getHead() {
+    public SinglyNode getHead() {
         return head;
     }
 
-    public Node getTail() {
+    public SinglyNode getTail() {
         return tail;
     }
 
@@ -30,7 +30,7 @@ public class LinkedList {
         return size;
     }
 
-    public boolean addFirst(Node node) {
+    public boolean addFirst(SinglyNode node) {
         nodeNullCheck(node);
         node.setNext(head);
         head = node;
@@ -38,7 +38,7 @@ public class LinkedList {
         return true;
     }
 
-    public boolean addLast(Node node) {
+    public boolean addLast(SinglyNode node) {
         nodeNullCheck(node);
         tail.setNext(node);
         tail = node;
@@ -46,7 +46,7 @@ public class LinkedList {
         return true;
     }
 
-    public boolean addAtIndex(int index, Node node) {
+    public boolean addAtIndex(int index, SinglyNode node) {
         nodeNullCheck(node);
         if (index < 0 || index > getSize()) {
             return false;
@@ -55,7 +55,7 @@ public class LinkedList {
         } else if (index == getSize()) {
             return addLast(node);
         }
-        Node tNode = getNodeJustBeforeIndex(index);
+        SinglyNode tNode = getNodeJustBeforeIndex(index);
         node.setNext(tNode.getNext());
         tNode.setNext(node);
         increaseSizeByOne();
@@ -69,7 +69,7 @@ public class LinkedList {
     }
 
     public boolean removeLast() {
-        Node tNode = getNodeJustBeforeIndex(getSize() - 1);
+        SinglyNode tNode = getNodeJustBeforeIndex(getSize() - 1);
         tNode.setNext(null);
         tail = tNode;
         decreaseSizeByOne();
@@ -85,7 +85,7 @@ public class LinkedList {
             return removeLast();
         }
 
-        Node tNode = getNodeJustBeforeIndex(index);
+        SinglyNode tNode = getNodeJustBeforeIndex(index);
         tNode.setNext(tNode.getNext().getNext());
         decreaseSizeByOne();
         return true;
@@ -99,15 +99,15 @@ public class LinkedList {
         size--;
     }
 
-    private Node getNodeJustBeforeIndex(int index) {
-        Node tNode = getHead();
+    private SinglyNode getNodeJustBeforeIndex(int index) {
+        SinglyNode tNode = getHead();
         for (int i = 1; i < index; i++) {
             tNode = tNode.getNext();
         }
         return tNode;
     }
 
-    private void nodeNullCheck(Node node) {
+    private void nodeNullCheck(SinglyNode node) {
         if (node == null)
             throw new IllegalArgumentException("Node cannot be null");
     }
