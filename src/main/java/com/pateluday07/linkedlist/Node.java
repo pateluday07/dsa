@@ -1,4 +1,4 @@
-package com.pateluday07.linkedlist;
+package  com.pateluday07.linkedlist;
 
 public class Node {
 

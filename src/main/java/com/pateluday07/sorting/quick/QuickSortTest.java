@@ -1,7 +1,7 @@
 package com.pateluday07.sorting.quick;
 
-import com.pateluday07.sorting.quick.hoares.QuickSortHoareRandomPivot;
 import com.pateluday07.sorting.quick.hoares.QuickSortHoare;
+import com.pateluday07.sorting.quick.hoares.QuickSortHoareRandomPivot;
 import com.pateluday07.sorting.quick.lomuto.QuickSortLomuto;
 import com.pateluday07.sorting.quick.lomuto.QuickSortLomutoRandomPivot;
 
