@@ -14,11 +14,7 @@ public class LinkedListTester {
 
         SinglyLinkedList singlyLinkedList = new SinglyLinkedList(node1);
 
-        SinglyNode n = singlyLinkedList.getHead();
-        while (n != null) {
-            System.out.println(n.getVal());
-            n = n.getNext();
-        }
+        System.out.println(singlyLinkedList);
 
         System.out.println("Head: " + singlyLinkedList.getHead().getVal());
         System.out.println("Tail: " + singlyLinkedList.getTail().getVal());
@@ -28,11 +24,7 @@ public class LinkedListTester {
         SinglyNode node0 = new SinglyNode(0);
         singlyLinkedList.addFirst(node0);
 
-        n = singlyLinkedList.getHead();
-        while (n != null) {
-            System.out.println(n.getVal());
-            n = n.getNext();
-        }
+        System.out.println(singlyLinkedList);
 
         System.out.println("Head: " + singlyLinkedList.getHead().getVal());
         System.out.println("Tail: " + singlyLinkedList.getTail().getVal());
@@ -42,11 +34,7 @@ public class LinkedListTester {
         SinglyNode node5 = new SinglyNode(5);
         singlyLinkedList.addLast(node5);
 
-        n = singlyLinkedList.getHead();
-        while (n != null) {
-            System.out.println(n.getVal());
-            n = n.getNext();
-        }
+        System.out.println(singlyLinkedList);
 
         System.out.println("Head: " + singlyLinkedList.getHead().getVal());
         System.out.println("Tail: " + singlyLinkedList.getTail().getVal());
@@ -56,11 +44,7 @@ public class LinkedListTester {
         SinglyNode nodeAtIndex = new SinglyNode(0);
         singlyLinkedList.addAtIndex(2, nodeAtIndex);
 
-        n = singlyLinkedList.getHead();
-        while (n != null) {
-            System.out.println(n.getVal());
-            n = n.getNext();
-        }
+        System.out.println(singlyLinkedList);
 
         System.out.println("Head: " + singlyLinkedList.getHead().getVal());
         System.out.println("Tail: " + singlyLinkedList.getTail().getVal());
@@ -68,11 +52,8 @@ public class LinkedListTester {
 
         System.out.println("\nRemove First Node");
         singlyLinkedList.removeFirst();
-        n = singlyLinkedList.getHead();
-        while (n != null) {
-            System.out.println(n.getVal());
-            n = n.getNext();
-        }
+
+        System.out.println(singlyLinkedList);
 
         System.out.println("Head: " + singlyLinkedList.getHead().getVal());
         System.out.println("Tail: " + singlyLinkedList.getTail().getVal());
@@ -80,11 +61,8 @@ public class LinkedListTester {
 
         System.out.println("\nRemove Last Node");
         singlyLinkedList.removeLast();
-        n = singlyLinkedList.getHead();
-        while (n != null) {
-            System.out.println(n.getVal());
-            n = n.getNext();
-        }
+
+        System.out.println(singlyLinkedList);
 
         System.out.println("Head: " + singlyLinkedList.getHead().getVal());
         System.out.println("Tail: " + singlyLinkedList.getTail().getVal());
@@ -93,11 +71,8 @@ public class LinkedListTester {
 
         System.out.println("\nRemove From Index");
         singlyLinkedList.removeFromIndex(3);
-        n = singlyLinkedList.getHead();
-        while (n != null) {
-            System.out.println(n.getVal());
-            n = n.getNext();
-        }
+
+        System.out.println(singlyLinkedList);
 
         System.out.println("Head: " + singlyLinkedList.getHead().getVal());
         System.out.println("Tail: " + singlyLinkedList.getTail().getVal());
