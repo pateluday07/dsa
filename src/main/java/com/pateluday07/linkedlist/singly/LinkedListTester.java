@@ -1,4 +1,4 @@
-package com.pateluday07.linkedlist.singly.singly;
+package com.pateluday07.linkedlist.singly;
 
 public class LinkedListTester {
 

@@ -1,7 +1,5 @@
 package com.pateluday07.linkedlist.singly;
 
-import com.pateluday07.linkedlist.singly.singly.SinglyLinkedList;
-import com.pateluday07.linkedlist.singly.singly.SinglyNode;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
